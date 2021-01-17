@@ -486,14 +486,13 @@
   #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
-
-  #if ENABLED(PID_PARAMS_PER_HOTEND)
-    // Specify between 1 and HOTENDS values per array.
   //measured values for hypercube
   #define DEFAULT_Kp 16.60
   #define DEFAULT_Ki 1.07
   #define DEFAULT_Kd 64.63
 
+  #if ENABLED(PID_PARAMS_PER_HOTEND)
+    // Specify between 1 and HOTENDS values per array.
     #define DEFAULT_Kp  22.20
   //#define DEFAULT_Kp 22.2
   //#define DEFAULT_Ki 1.08
@@ -744,7 +743,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.0, 80.0, 397.29, 400.00 } //417.39
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80.0, 80.0, 397.29, 415.00 } //417.39
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -995,7 +994,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -3, 16, -2.151 }
+#define NOZZLE_TO_PROBE_OFFSET { -3, 16, -2.160 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
