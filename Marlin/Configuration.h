@@ -1485,7 +1485,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -3, 16, -1.94 }
+#define NOZZLE_TO_PROBE_OFFSET { -3, 16, -2.055 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -2213,8 +2213,8 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PETG"
-#define PREHEAT_1_TEMP_HOTEND  240
-#define PREHEAT_1_TEMP_BED      70
+#define PREHEAT_1_TEMP_HOTEND  235
+#define PREHEAT_1_TEMP_BED      90
 #define PREHEAT_1_TEMP_CHAMBER   0
 #define PREHEAT_1_FAN_SPEED     77 // Value from 0 to 255
 
@@ -3304,7 +3304,7 @@
   #define NEOPIXEL_PIXELS              44 // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
   //#define NEOPIXEL_IS_SEQUENTIAL          // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
   #define NEOPIXEL_BRIGHTNESS         204 // Initial brightness (0-255)
-  //#define NEOPIXEL_STARTUP_TEST         // Cycle through colors at startup
+  #define NEOPIXEL_STARTUP_TEST         // Cycle through colors at startup
 
   // Support for second Adafruit NeoPixel LED driver controlled with M150 S1 ...
   //#define NEOPIXEL2_SEPARATE
